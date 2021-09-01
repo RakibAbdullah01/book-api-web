@@ -1,8 +1,3 @@
-const details = document.getElementById('details');
-const desplayAll = document.getElementById('desplay');
-
-
-
 // Get Fetch JSON Data
 const searchAll = () => {
     const input = document.getElementById('input');
@@ -15,7 +10,6 @@ const searchAll = () => {
             counter(data.num_found);
             desplayBooks(data.docs);
         });
-
 }
 
 // Count Total Result and Error Message
@@ -34,6 +28,7 @@ const counter = (count) => {
 
 // Desplay All Results of Book
 const desplayBooks = (books) => {
+    const desplayAll = document.getElementById('desplay');
     desplayAll.textContent = '';
     books.forEach((book) => {
         const div = document.createElement('div');
